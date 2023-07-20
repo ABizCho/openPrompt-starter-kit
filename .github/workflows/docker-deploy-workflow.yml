@@ -40,11 +40,10 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            docker pull $IMAGE_NAME
+            docker pull ${{ env.IMAGE_NAME }}
             docker rm -f blockDonate-react
             images=$(docker images | awk 'NR>4 {print $3}')
             if [ -n "$images" ]; then
               echo "$images" | xargs docker rmi -f
             fi
-            docker run -d -p 3001:80 --name blockDonate-react $IMAGE_NAME
-          envs: ['IMAGE_NAME']
+            docker run -d -p 3001:80 --name blockDonate-react ${{ env.IMAGE_NAME }}
