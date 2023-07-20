@@ -29,10 +29,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          cd nest 
           docker build -t ${{ env.IMAGE_NAME }} . 
           docker push ${{ env.IMAGE_NAME }}
-          cd ../
 
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v0.1.10
