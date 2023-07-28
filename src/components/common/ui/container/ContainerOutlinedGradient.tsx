@@ -1,16 +1,15 @@
-import { Box, BoxProps } from '@mui/material';
-import { SxProps, Theme } from '@mui/system';
+import { Container } from '@mui/material';
 import palette from '@/styles/mui/palette';
 import theme from '@/styles/mui/theme';
-import { IBoxOmitted } from './types';
+import { IContainerOmitted } from './types';
 
-const BoxOutlinedGradient: React.FC<IBoxOmitted> = ({
+const ContainerOutlinedGradient: React.FC<IContainerOmitted> = ({
   children,
   sx,
   ...otherProps
 }) => {
   return (
-    <Box
+    <Container
       {...otherProps}
       sx={{
         width: '100%',
@@ -27,8 +26,8 @@ const BoxOutlinedGradient: React.FC<IBoxOmitted> = ({
       }}
     >
       {children}
-    </Box>
+    </Container>
   );
 };
 
-export default BoxOutlinedGradient;
+export default ContainerOutlinedGradient;

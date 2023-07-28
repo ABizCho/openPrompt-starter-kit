@@ -3,35 +3,21 @@ import { keyframes, styled } from '@mui/system';
 import BackgroundBasic from './BackgroundBasic';
 import { IBackgroundProps } from './types';
 
-const rotate = keyframes`
+const moveAndRotate = keyframes`
   0% {
-    transform: translateY(-50%) rotate(0deg);
+    transform: translateY(-50%) translate(130%, 40%) rotate(0deg);
   }
   100% {
-    transform: translateY(-50%) rotate(360deg);
-  }
-`;
-
-const moveLeft = keyframes`
-  0% {
-    left: 70%;
-    top: 60%;
-  }
-  100% {
-    left: -100%;
-    top: 50%;
+    transform: translateY(-50%) translate(-100%, 70%) rotate(230deg);
   }
 `;
 
 const AnimatedSymbol = styled('img')({
   position: 'fixed',
-  top: '70%',
-  left: '70%',
   width: '1000px',
   height: '100%',
   filter: 'blur(15px)',
-  transform: 'translateY(-50%)',
-  animation: `${rotate} 240s linear infinite, ${moveLeft} 180s linear infinite`,
+  animation: `${moveAndRotate} 100s linear infinite`,
   zIndex: -1,
 });
 

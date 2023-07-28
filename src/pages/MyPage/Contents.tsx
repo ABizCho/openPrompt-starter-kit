@@ -9,8 +9,8 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
-import BoxOutlinedGradient from '@/components/common/ui/box/BoxOutlinedGradient';
-import BoxOutlinedRounded from '@/components/common/ui/box/BoxOutlinedRounded';
+import ContainerOutlinedGradient from '@/components/common/ui/container/ContainerOutlinedGradient';
+import ContainerOutlinedRounded from '@/components/common/ui/container/ContainerOutlinedRounded';
 import palette from '@/styles/mui/palette';
 
 const ContentDonateHistory = () => {
@@ -24,10 +24,10 @@ const ContentDonateHistory = () => {
         gap: '40px',
       }}
     >
-      <BoxOutlinedRounded sx={{ height: '130px' }} />
-      <BoxOutlinedRounded sx={{ height: '130px' }} />
-      <BoxOutlinedRounded sx={{ height: '130px' }} />
-      <BoxOutlinedRounded sx={{ height: '130px' }} />
+      <ContainerOutlinedRounded sx={{ height: '130px' }} />
+      <ContainerOutlinedRounded sx={{ height: '130px' }} />
+      <ContainerOutlinedRounded sx={{ height: '130px' }} />
+      <ContainerOutlinedRounded sx={{ height: '130px' }} />
     </Container>
   );
 };
@@ -78,10 +78,10 @@ const ContentPersonalInfo = () => {
         gap: '40px',
       }}
     >
-      <BoxOutlinedGradient sx={{ height: '150px' }} />
-      <BoxOutlinedGradient sx={{ height: '150px' }} />
-      <BoxOutlinedGradient sx={{ height: '150px' }} />
-      <BoxOutlinedGradient sx={{ height: '150px' }} />
+      <ContainerOutlinedGradient sx={{ height: '150px' }} />
+      <ContainerOutlinedGradient sx={{ height: '150px' }} />
+      <ContainerOutlinedGradient sx={{ height: '150px' }} />
+      <ContainerOutlinedGradient sx={{ height: '150px' }} />
     </Container>
   );
 };

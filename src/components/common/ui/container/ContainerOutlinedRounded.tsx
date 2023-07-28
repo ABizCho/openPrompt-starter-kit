@@ -1,15 +1,15 @@
-import { Box } from '@mui/material';
+import { Container } from '@mui/material';
 import theme from '@/styles/mui/theme';
 import palette from '@/styles/mui/palette';
-import { IBoxOmitted } from './types';
+import { IContainerOmitted } from './types';
 
-const BoxOutlinedRounded: React.FC<IBoxOmitted> = ({
+const ContainerOutlinedRounded: React.FC<IContainerOmitted> = ({
   children,
   sx,
   ...otherProps
 }) => {
   return (
-    <Box
+    <Container
       {...otherProps}
       sx={{
         width: '100%',
@@ -25,8 +25,8 @@ const BoxOutlinedRounded: React.FC<IBoxOmitted> = ({
       }}
     >
       {children}
-    </Box>
+    </Container>
   );
 };
 
-export default BoxOutlinedRounded;
+export default ContainerOutlinedRounded;

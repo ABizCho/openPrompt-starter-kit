@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Divider, Typography } from '@mui/material';
 import Template from '@/components/common/ui/template';
-import BoxOutlinedRounded from '@/components/common/ui/box/BoxOutlinedRounded';
+import ContainerOutlinedRounded from '@/components/common/ui/container/ContainerOutlinedRounded';
 import {
   TBackgroundColor,
   TBackgroundVariant,
@@ -180,7 +180,7 @@ export const StyledBox = ({ children, ...props }: any) => {
 
 export const StyledBoxOutlined = ({ children, ...props }: any) => {
   return (
-    <BoxOutlinedRounded
+    <ContainerOutlinedRounded
       sx={{
         width: '100%',
         marginTop: '30px',
@@ -192,7 +192,7 @@ export const StyledBoxOutlined = ({ children, ...props }: any) => {
       }}
     >
       {children}
-    </BoxOutlinedRounded>
+    </ContainerOutlinedRounded>
   );
 };
 

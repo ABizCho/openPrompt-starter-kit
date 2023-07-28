@@ -1,5 +1,4 @@
-import { blue, red } from '@mui/material/colors';
-import { experimental_sx as sx, createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 import palette from './palette';
 import typography from './typography';
 

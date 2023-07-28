@@ -1,8 +1,8 @@
-import { Typography, TextField, Box, Container } from '@mui/material';
+import { Typography, Box, Container } from '@mui/material';
 import { useState, useRef } from 'react';
 
-import BoxOutlinedGradient from '@/components/common/ui/box/BoxOutlinedGradient';
-import BoxOutlinedRounded from '@/components/common/ui/box/BoxOutlinedRounded';
+import ContainerOutlinedGradient from '@/components/common/ui/container/ContainerOutlinedGradient';
+import ContainerOutlinedRounded from '@/components/common/ui/container/ContainerOutlinedRounded';
 import UnderbarToggleButtonGroup, {
   ContentType,
 } from '@/components/common/ui/button/ToggleButtons/UnderbarToggleButtonGroup';
@@ -12,7 +12,7 @@ import {
   ContentPersonalInfo,
 } from '@/pages/MyPage/Contents';
 
-import { InnerBoxLeft, StyledBox, StyledBoxOutlined } from '..';
+import { StyledBox, StyledBoxOutlined } from '..';
 
 export const OtherComponents = () => {
   const [content, setContent] = useState<ContentType>('donationHistory');
@@ -65,7 +65,7 @@ export const OtherComponents = () => {
         <br />
         <Typography variant="subtitle1">Custom Boxes</Typography>
         <Typography sx={{ textAlign: 'center' }}>
-          [BoxOutlinedGradient, BoxOutlinedRounded]
+          [ContainerOutlinedGradient, ContainerOutlinedRounded]
           <br />
           <br />
           Mui Box를 이용해 만든 기본적인 커스텀 박스입니다. <br />
@@ -81,11 +81,11 @@ export const OtherComponents = () => {
               marginRight: '10%',
             }}
           >
-            <BoxOutlinedGradient />
-            <BoxOutlinedGradient sx={{ backgroundColor: 'red' }} />
+            <ContainerOutlinedGradient />
+            <ContainerOutlinedGradient sx={{ backgroundColor: 'red' }} />
             <br />
-            <BoxOutlinedRounded />
-            <BoxOutlinedRounded sx={{ borderColor: 'red' }} />
+            <ContainerOutlinedRounded />
+            <ContainerOutlinedRounded sx={{ borderColor: 'red' }} />
           </Box>
           <Box sx={{ width: '70%', marginLeft: '2rem' }}>
             <Typography>
@@ -94,14 +94,14 @@ export const OtherComponents = () => {
               <br />
               <br />
             </Typography>
-            <Typography color="primary">{`<BoxOutlinedGradient />
+            <Typography color="primary">{`<ContainerOutlinedGradient />
             `}</Typography>
-            <Typography color="primary">{`<BoxOutlinedGradient sx={{ backgroundColor: 'red' }} />
+            <Typography color="primary">{`<ContainerOutlinedGradient sx={{ backgroundColor: 'red' }} />
             `}</Typography>
             <br />
             <br />
-            <Typography color="primary">{`<BoxOutlinedRounded />`}</Typography>
-            <Typography color="primary">{`<BoxOutlinedGradient sx={{ borderColor: 'red' }} />
+            <Typography color="primary">{`<ContainerOutlinedRounded />`}</Typography>
+            <Typography color="primary">{`<ContainerOutlinedGradient sx={{ borderColor: 'red' }} />
             `}</Typography>
           </Box>
         </StyledBoxOutlined>
