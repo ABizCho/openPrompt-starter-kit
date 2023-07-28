@@ -19,6 +19,16 @@ const RouterMeta: RouterMetaType = {
     path: '/auth',
     isShow: true,
   },
+  DesignSystemPage: {
+    name: 'DesignSystem',
+    path: '/design-system',
+    isShow: true,
+  },
+  MyPage: {
+    name: 'Mypage',
+    path: '/mypage',
+    isShow: false,
+  },
 };
 
 export default RouterMeta;
