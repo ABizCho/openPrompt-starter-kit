@@ -1,5 +1,3 @@
-import palette from './palette';
-
 const typography = {
   fontFamily: 'Noto Sans KR, sans-serif',
   fontSize: 12,

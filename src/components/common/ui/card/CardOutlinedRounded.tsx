@@ -3,7 +3,7 @@ import theme from '@/styles/mui/theme';
 import palette from '@/styles/mui/palette';
 import { IContainerOmitted } from './types';
 
-const ContainerOutlinedRounded: React.FC<IContainerOmitted> = ({
+const CardOutlinedRounded: React.FC<IContainerOmitted> = ({
   children,
   sx,
   ...otherProps
@@ -18,7 +18,6 @@ const ContainerOutlinedRounded: React.FC<IContainerOmitted> = ({
         color: palette.white,
         backgroundColor: 'rgba(60, 60, 60, 0.4)',
         border: 'solid 1px #fff',
-
         borderRadius: '1rem',
         padding: '20px',
         ...sx,
@@ -29,4 +28,4 @@ const ContainerOutlinedRounded: React.FC<IContainerOmitted> = ({
   );
 };
 
-export default ContainerOutlinedRounded;
+export default CardOutlinedRounded;

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, Button, Divider, Typography } from '@mui/material';
 import Template from '@/components/common/ui/template';
-import ContainerOutlinedRounded from '@/components/common/ui/container/ContainerOutlinedRounded';
+import CardOutlinedRounded from '@/components/common/ui/card/CardOutlinedRounded';
 import {
   TBackgroundColor,
   TBackgroundVariant,
@@ -160,7 +160,16 @@ const DesignSystemPage = () => {
 
 export default DesignSystemPage;
 
-export const StyledBox = ({ children, ...props }: any) => {
+interface CustomBoxProps extends React.ComponentPropsWithoutRef<typeof Box> {
+  children: React.ReactNode;
+}
+
+interface StyledBoxOutlinedProps
+  extends React.ComponentPropsWithoutRef<typeof CardOutlinedRounded> {
+  children: React.ReactNode;
+}
+
+export const StyledBox = ({ children, ...props }: CustomBoxProps) => {
   return (
     <Box
       sx={{
@@ -178,9 +187,12 @@ export const StyledBox = ({ children, ...props }: any) => {
   );
 };
 
-export const StyledBoxOutlined = ({ children, ...props }: any) => {
+export const StyledBoxOutlined = ({
+  children,
+  ...props
+}: StyledBoxOutlinedProps) => {
   return (
-    <ContainerOutlinedRounded
+    <CardOutlinedRounded
       sx={{
         width: '100%',
         marginTop: '30px',
@@ -192,11 +204,11 @@ export const StyledBoxOutlined = ({ children, ...props }: any) => {
       }}
     >
       {children}
-    </ContainerOutlinedRounded>
+    </CardOutlinedRounded>
   );
 };
 
-export const InnerBoxLeft = ({ children, ...props }: any) => {
+export const InnerBoxLeft = ({ children, ...props }: CustomBoxProps) => {
   return (
     <Box
       sx={{

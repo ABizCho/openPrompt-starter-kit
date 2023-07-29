@@ -1,6 +1,6 @@
-import React, { CSSProperties, ReactNode } from 'react';
+import React from 'react';
 import BackgroundBasic from './BackgroundBasic';
-import { IBackgroundProps, ISubBackgroundProps } from './types';
+import { ISubBackgroundProps } from './types';
 
 const styles = {
   gradientBackground: {

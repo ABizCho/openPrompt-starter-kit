@@ -9,8 +9,8 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
-import ContainerOutlinedGradient from '@/components/common/ui/container/ContainerOutlinedGradient';
-import ContainerOutlinedRounded from '@/components/common/ui/container/ContainerOutlinedRounded';
+import CardOutlinedGradient from '@/components/common/ui/card/CardOutlinedGradient';
+import CardOutlinedRounded from '@/components/common/ui/card/CardOutlinedRounded';
 import palette from '@/styles/mui/palette';
 
 const ContentDonateHistory = () => {
@@ -24,10 +24,10 @@ const ContentDonateHistory = () => {
         gap: '40px',
       }}
     >
-      <ContainerOutlinedRounded sx={{ height: '130px' }} />
-      <ContainerOutlinedRounded sx={{ height: '130px' }} />
-      <ContainerOutlinedRounded sx={{ height: '130px' }} />
-      <ContainerOutlinedRounded sx={{ height: '130px' }} />
+      <CardOutlinedRounded sx={{ height: '130px' }} />
+      <CardOutlinedRounded sx={{ height: '130px' }} />
+      <CardOutlinedRounded sx={{ height: '130px' }} />
+      <CardOutlinedRounded sx={{ height: '130px' }} />
     </Container>
   );
 };
@@ -78,10 +78,10 @@ const ContentPersonalInfo = () => {
         gap: '40px',
       }}
     >
-      <ContainerOutlinedGradient sx={{ height: '150px' }} />
-      <ContainerOutlinedGradient sx={{ height: '150px' }} />
-      <ContainerOutlinedGradient sx={{ height: '150px' }} />
-      <ContainerOutlinedGradient sx={{ height: '150px' }} />
+      <CardOutlinedGradient sx={{ height: '150px' }} />
+      <CardOutlinedGradient sx={{ height: '150px' }} />
+      <CardOutlinedGradient sx={{ height: '150px' }} />
+      <CardOutlinedGradient sx={{ height: '150px' }} />
     </Container>
   );
 };

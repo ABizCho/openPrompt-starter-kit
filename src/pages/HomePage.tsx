@@ -1,15 +1,5 @@
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Container,
-  Divider,
-  TextField,
-  Typography,
-} from '@mui/material';
-import { Background } from '@/components/common/ui/background';
+import { Typography } from '@mui/material';
 
-import { BackButton } from '@/components/common/ui/button/BackButton';
 import Template from '@/components/common/ui/template';
 
 const HomePage = () => {

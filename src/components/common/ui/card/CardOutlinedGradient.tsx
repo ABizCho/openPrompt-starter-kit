@@ -3,7 +3,7 @@ import palette from '@/styles/mui/palette';
 import theme from '@/styles/mui/theme';
 import { IContainerOmitted } from './types';
 
-const ContainerOutlinedGradient: React.FC<IContainerOmitted> = ({
+const CardOutlinedGradient: React.FC<IContainerOmitted> = ({
   children,
   sx,
   ...otherProps
@@ -30,4 +30,4 @@ const ContainerOutlinedGradient: React.FC<IContainerOmitted> = ({
   );
 };
 
-export default ContainerOutlinedGradient;
+export default CardOutlinedGradient;

@@ -1,9 +1,9 @@
 import { Typography, Box, Container } from '@mui/material';
 import { useState, useRef } from 'react';
 import Template from '@/components/common/ui/template';
-import UnderbarToggleButtonGroup, {
+import CustomTabs, {
   ContentType,
-} from '@/components/common/ui/button/ToggleButtons/UnderbarToggleButtonGroup';
+} from '@/components/common/ui/tabs/CustomTabs';
 
 import {
   ContentDonateHistory,
@@ -16,6 +16,7 @@ const MyPage = () => {
   const [showContent, setShowContent] = useState(true);
 
   type ContentData = {
+    // eslint-disable-next-line no-unused-vars
     [key in ContentType]: {
       label: string;
       component: JSX.Element;
@@ -60,7 +61,7 @@ const MyPage = () => {
         나의 기부 이력
       </Typography>
       <Box sx={{ marginY: '10px' }}>
-        <UnderbarToggleButtonGroup
+        <CustomTabs
           buttons={Object.keys(contentsData).map((value) => ({
             value,
             label: contentsData[value].label,

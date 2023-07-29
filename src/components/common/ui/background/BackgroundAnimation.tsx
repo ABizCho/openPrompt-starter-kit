@@ -5,7 +5,7 @@ import { IBackgroundProps } from './types';
 
 const moveAndRotate = keyframes`
   0% {
-    transform: translateY(-50%) translate(130%, 40%) rotate(0deg);
+    transform: translateY(-50%) translate(100%, 20%) rotate(0deg);
   }
   100% {
     transform: translateY(-50%) translate(-100%, 70%) rotate(230deg);
@@ -14,7 +14,7 @@ const moveAndRotate = keyframes`
 
 const AnimatedSymbol = styled('img')({
   position: 'fixed',
-  width: '1000px',
+  width: '100vw',
   height: '100%',
   filter: 'blur(15px)',
   animation: `${moveAndRotate} 100s linear infinite`,

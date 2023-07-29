@@ -1,10 +1,9 @@
-import { Box, ToggleButtonGroup, useTheme } from '@mui/material'; // useTheme을 임포트합니다.
-import { useEffect, useRef, useState } from 'react';
-import { PlainToggleButton } from './PlainToggleButton';
+import { Box, Button, ButtonGroup, useTheme } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 export type ContentType = string;
 
-interface UnderbarToggleButtonGroupProps {
+interface CustomTabsProps {
   buttons: {
     value: ContentType;
     label: string;
@@ -14,7 +13,7 @@ interface UnderbarToggleButtonGroupProps {
   onChange: (value: ContentType) => void;
 }
 
-const UnderbarToggleButtonGroup: React.FC<UnderbarToggleButtonGroupProps> = ({
+const CustomTabs: React.FC<CustomTabsProps> = ({
   buttons,
   refs,
   selectedValue,
@@ -34,47 +33,58 @@ const UnderbarToggleButtonGroup: React.FC<UnderbarToggleButtonGroupProps> = ({
         position: 'absolute',
         left: rect.left - parentRect.left + 4,
         width: rect.width - 8,
-        bottom: '5px',
+        bottom: '0px',
         height: '2px',
         backgroundColor: theme.palette.primary.main,
         transition: '0.3s',
       });
     }
-  }, [selectedValue, theme]);
+  }, [refs, selectedValue, theme]);
 
-  const handleChange = (
-    event: React.MouseEvent<HTMLElement>,
-    newContent: ContentType,
-  ) => {
-    if (newContent !== selectedValue) {
-      onChange(newContent);
-    }
-  };
+  const getButtonStyle = (value: ContentType) => ({
+    border: 'none',
+    fontSize: '16px',
+    color:
+      value === selectedValue
+        ? theme.palette.common.white
+        : theme.palette.grey[400],
+    '&:hover': {
+      backgroundColor: 'transparent',
+      border: 'none',
+    },
+    '&:focus': {
+      boxShadow: 'none',
+      border: 'none',
+    },
+  });
 
   return (
     <Box position="relative">
-      <ToggleButtonGroup
+      <ButtonGroup
         color="primary"
-        value={selectedValue}
-        exclusive
-        onChange={handleChange}
         aria-label="Content Type"
         sx={{ gap: '70px', border: 'none' }}
       >
         {buttons.map((button) => (
-          <PlainToggleButton
+          <Button
+            disableRipple
             key={button.value}
             ref={refs[button.value as ContentType]}
-            disableRipple
-            value={button.value}
+            onClick={() => {
+              if (button.value !== selectedValue) {
+                onChange(button.value);
+              }
+            }}
+            color={button.value === selectedValue ? 'inherit' : 'primary'}
+            sx={getButtonStyle(button.value)}
           >
             {button.label}
-          </PlainToggleButton>
+          </Button>
         ))}
-      </ToggleButtonGroup>
+      </ButtonGroup>
       <Box sx={underlineStyle}></Box>
     </Box>
   );
 };
 
-export default UnderbarToggleButtonGroup;
+export default CustomTabs;

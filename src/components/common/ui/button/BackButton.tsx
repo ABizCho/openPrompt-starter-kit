@@ -19,7 +19,7 @@ export const BackButton: React.FC<BackButtonProps> = ({ variant = 'fill' }) => {
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        border: variant === 'outlined' ? '1px solid white' : '1px solid black',
+        border: variant === 'outlined' ? '1px solid white' : 'none',
         borderRadius: '100%',
         backgroundColor:
           variant === 'fill' ? palette.black.main : 'transparent',
@@ -27,6 +27,8 @@ export const BackButton: React.FC<BackButtonProps> = ({ variant = 'fill' }) => {
         cursor: 'pointer',
         transition: 'background-color 0.3s',
         '&:hover': {
+          border:
+            variant === 'outlined' ? `1px solid ${palette.grey[300]}` : 'none',
           backgroundColor:
             variant === 'fill' ? palette.grey[600] : palette.grey[300],
         },

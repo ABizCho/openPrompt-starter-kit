@@ -1,11 +1,11 @@
 import { Typography, Box, Container } from '@mui/material';
 import { useState, useRef } from 'react';
 
-import ContainerOutlinedGradient from '@/components/common/ui/container/ContainerOutlinedGradient';
-import ContainerOutlinedRounded from '@/components/common/ui/container/ContainerOutlinedRounded';
-import UnderbarToggleButtonGroup, {
+import CardOutlinedGradient from '@/components/common/ui/card/CardOutlinedGradient';
+import CardOutlinedRounded from '@/components/common/ui/card/CardOutlinedRounded';
+import CustomTabs, {
   ContentType,
-} from '@/components/common/ui/button/ToggleButtons/UnderbarToggleButtonGroup';
+} from '@/components/common/ui/tabs/CustomTabs';
 import {
   ContentDonateHistory,
   ContentOwnNFT,
@@ -19,6 +19,7 @@ export const OtherComponents = () => {
   const [showContent, setShowContent] = useState(true);
 
   type ContentData = {
+    // eslint-disable-next-line no-unused-vars
     [key in ContentType]: {
       label: string;
       component: JSX.Element;
@@ -65,7 +66,7 @@ export const OtherComponents = () => {
         <br />
         <Typography variant="subtitle1">Custom Boxes</Typography>
         <Typography sx={{ textAlign: 'center' }}>
-          [ContainerOutlinedGradient, ContainerOutlinedRounded]
+          [CardOutlinedGradient, CardOutlinedRounded]
           <br />
           <br />
           Mui Box를 이용해 만든 기본적인 커스텀 박스입니다. <br />
@@ -81,11 +82,11 @@ export const OtherComponents = () => {
               marginRight: '10%',
             }}
           >
-            <ContainerOutlinedGradient />
-            <ContainerOutlinedGradient sx={{ backgroundColor: 'red' }} />
+            <CardOutlinedGradient />
+            <CardOutlinedGradient sx={{ backgroundColor: 'red' }} />
             <br />
-            <ContainerOutlinedRounded />
-            <ContainerOutlinedRounded sx={{ borderColor: 'red' }} />
+            <CardOutlinedRounded />
+            <CardOutlinedRounded sx={{ borderColor: 'red' }} />
           </Box>
           <Box sx={{ width: '70%', marginLeft: '2rem' }}>
             <Typography>
@@ -94,14 +95,14 @@ export const OtherComponents = () => {
               <br />
               <br />
             </Typography>
-            <Typography color="primary">{`<ContainerOutlinedGradient />
+            <Typography color="primary">{`<CardOutlinedGradient />
             `}</Typography>
-            <Typography color="primary">{`<ContainerOutlinedGradient sx={{ backgroundColor: 'red' }} />
+            <Typography color="primary">{`<CardOutlinedGradient sx={{ backgroundColor: 'red' }} />
             `}</Typography>
             <br />
             <br />
-            <Typography color="primary">{`<ContainerOutlinedRounded />`}</Typography>
-            <Typography color="primary">{`<ContainerOutlinedGradient sx={{ borderColor: 'red' }} />
+            <Typography color="primary">{`<CardOutlinedRounded />`}</Typography>
+            <Typography color="primary">{`<CardOutlinedGradient sx={{ borderColor: 'red' }} />
             `}</Typography>
           </Box>
         </StyledBoxOutlined>
@@ -114,12 +115,11 @@ export const OtherComponents = () => {
         <br />
         <br />
         <br />
-        <Typography variant="subtitle1">UnderbarToggleButtonGroup</Typography>
+        <Typography variant="subtitle1">CustomTabs</Typography>
         <br />
         <Typography sx={{ textAlign: 'center' }}>
-          컨텐츠 갯수, 내용 확장성을 고려해 구현한 토글 버튼 그룹입니다. <br />
-          사용법은 mypage 측 예시활용 및, UnderbarToggleButton 구현체를
-          참고해주세요.
+          컨텐츠 갯수, 내용 확장성을 고려해 구현한 CustomTabs입니다. <br />
+          사용법은 mypage 측 예시활용 및, customTabs 구현체를 참고해주세요
         </Typography>
         <br />
         <br />
@@ -134,7 +134,7 @@ export const OtherComponents = () => {
           }}
         >
           <Box sx={{ marginY: '10px' }}>
-            <UnderbarToggleButtonGroup
+            <CustomTabs
               buttons={Object.keys(contentsData).map((value) => ({
                 value,
                 label: contentsData[value].label,
