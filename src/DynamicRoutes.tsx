@@ -2,10 +2,10 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useQueryErrorResetBoundary } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
-import Layout from '@/components/common/Layout';
-import RouterMeta from '@/lib/RouterMeta';
-import ErrorFallback from '@/components/common/ErrorFallback';
-import LoadingFallback from '@/components/common/LoadingFallback';
+import Layout from './components/common/layout/Layout';
+import RouterMeta from './lib/RouterMeta';
+import ErrorFallback from './components/common/layout/ErrorFallback';
+import LoadingFallback from './components/common/layout/LoadingFallback';
 
 const lazyImport = (pageName: string) =>
   lazy(() => import(`@/pages/${pageName}`));

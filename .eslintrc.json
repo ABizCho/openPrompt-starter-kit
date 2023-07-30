@@ -22,6 +22,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "import"],
   "rules": {
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": 0,
     "no-unused-vars": "warn",
     "react/jsx-props-no-spreading": "off",
