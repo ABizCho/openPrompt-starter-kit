@@ -13,6 +13,8 @@ const AuthPage = () => {
   return (
     <Template variant="gradient">
       {data.received}
+      {data.amount}
+
       <input
         type="text"
         name="received"
@@ -28,7 +30,7 @@ const AuthPage = () => {
         onChange={onChange}
       />
       <button type="button" onClick={onInit}>
-        onInit
+        초기화 예시
       </button>
     </Template>
   );
