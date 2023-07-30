@@ -7,19 +7,25 @@ CoFFeee 팀의 CRA + TypsScript 기반 프론트엔드 스타터 킷 입니다.
 #### Install
 
 ```
-yarn install
+npm install
 ```
 
 #### Start
 
 ```
-yarn start
+npm start
+```
+
+####  Run Ethereum Network for Dev
+
+```
+npm run ganache
 ```
 
 #### Build
 
 ```
-yarn build
+npm build
 ```
 
 #### env

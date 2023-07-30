@@ -1,5 +1,9 @@
 import { Typography, Box } from '@mui/material';
-import { InnerBoxLeft, StyledBox, StyledBoxOutlined } from '..';
+import {
+  InnerBoxLeft,
+  StyledBox,
+  StyledBoxOutlined,
+} from '../DesignSystemPage';
 
 export const TypographyDesign = () => {
   return (

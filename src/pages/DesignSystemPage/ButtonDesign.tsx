@@ -1,7 +1,7 @@
 import { Typography, Button, Box } from '@mui/material';
 import { useState } from 'react';
 import { CustomBackButton } from '@/components/common/CustomUI/button/CustomBackButton';
-import { InnerBoxLeft, StyledBox, StyledBoxOutlined } from '..';
+import { InnerBoxLeft, StyledBox, StyledBoxOutlined } from '.';
 
 type ButtonVariantType =
   | 'text'

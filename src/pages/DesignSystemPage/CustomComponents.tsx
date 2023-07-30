@@ -12,7 +12,7 @@ import {
   ContentPersonalInfo,
 } from '@/pages/MyPage/Contents';
 
-import { StyledBox, StyledBoxOutlined } from '..';
+import { StyledBox, StyledBoxOutlined } from '../DesignSystemPage';
 
 export const CustomComponents = () => {
   const [content, setContent] = useState<ContentType>('donationHistory');

@@ -3,18 +3,11 @@ const palette = {
     main: '#AEFF29',
     contrastText: '#414958',
   },
-  //   secondary: {
-  //     main: '#050C1A',
-  //     contrastText: '#fff',
-  //   },
-
   white: '#FFFFFF',
-
   black: {
     main: '#050C1A',
     contrastText: '#fff',
   },
-
   grey: {
     600: '#141E31',
     500: '#414958',
