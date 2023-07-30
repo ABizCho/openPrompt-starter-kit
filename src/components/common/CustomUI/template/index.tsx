@@ -1,19 +1,19 @@
 import { ReactNode } from 'react';
 import { Box, Container } from '@mui/material';
-import { Background } from '@/components/common/ui/background';
+import { Background } from '@/components/common/CustomUI/background';
 
-import { BackButton } from '@/components/common/ui/button/BackButton';
+import { CustomBackButton } from '@/components/common/CustomUI/button/CustomBackButton';
 
 import { TBackgroundVariant, TBackgroundColor } from '../background/types';
 
-interface ITemplate {
+interface TemplateProps {
   children: ReactNode;
   variant?: TBackgroundVariant; // default는 'basic'으로 설정
   bgcolor?: TBackgroundColor;
   withBackButton?: boolean;
 }
 
-const Template: React.FC<ITemplate> = ({
+const Template: React.FC<TemplateProps> = ({
   children,
   variant = 'basic',
   bgcolor,
@@ -24,7 +24,7 @@ const Template: React.FC<ITemplate> = ({
       <Container>
         {withBackButton && (
           <Box sx={{ marginBottom: '10px' }}>
-            <BackButton variant="outlined" />
+            <CustomBackButton variant="outlined" />
           </Box>
         )}
         <Container

@@ -1,3 +1,4 @@
+import { CssBaseline } from '@mui/material';
 import { Global, css } from '@emotion/react';
 import { BrowserRouter } from 'react-router-dom';
 import { QueryClientProvider } from '@tanstack/react-query';
@@ -8,6 +9,9 @@ import theme from './styles/mui/theme';
 import './App.css';
 
 const globalStyles = css`
+  * {
+    box-sizing: border-box;
+  }
   a {
     text-decoration: none;
   }

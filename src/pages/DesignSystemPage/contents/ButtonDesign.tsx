@@ -1,6 +1,6 @@
 import { Typography, Button, Box } from '@mui/material';
 import { useState } from 'react';
-import { BackButton } from '@/components/common/ui/button/BackButton';
+import { CustomBackButton } from '@/components/common/CustomUI/button/CustomBackButton';
 import { InnerBoxLeft, StyledBox, StyledBoxOutlined } from '..';
 
 type ButtonVariantType =
@@ -141,7 +141,7 @@ export const ButtonDesign = () => {
         <br />
         <br />
         <br />
-        <Typography variant="subtitle1">Back Button</Typography>
+        <Typography variant="subtitle1">Custom Back Button</Typography>
         <Typography sx={{ textAlign: 'center' }}>
           커스텀 컴포넌트 뒤로가기 버튼입니다.
           <br />
@@ -154,16 +154,16 @@ export const ButtonDesign = () => {
         </Typography>
         <StyledBoxOutlined>
           <InnerBoxLeft>
-            <BackButton />
-            <BackButton variant="outlined" />
+            <CustomBackButton />
+            <CustomBackButton variant="outlined" />
           </InnerBoxLeft>
           <Box sx={{ width: '70%' }}>
             <Typography>default (=fill)</Typography>
             <Typography color="primary">
-              {`<BackButton />`}
+              {`<CustomBackButton />`}
               <br />
               <br />
-              {`<BackButton variant="outlined" />`}
+              {`<CustomBackButton variant="outlined" />`}
               <br />
             </Typography>
           </Box>

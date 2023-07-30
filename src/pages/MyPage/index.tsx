@@ -1,9 +1,9 @@
 import { Typography, Box, Container } from '@mui/material';
 import { useState, useRef } from 'react';
-import Template from '@/components/common/ui/template';
+import Template from '@/components/common/CustomUI/template';
 import CustomTabs, {
   ContentType,
-} from '@/components/common/ui/tabs/CustomTabs';
+} from '@/components/common/CustomUI/tabs/CustomTabs';
 
 import {
   ContentDonateHistory,

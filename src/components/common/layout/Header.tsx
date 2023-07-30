@@ -36,13 +36,14 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar
-      position="sticky"
+      position="fixed"
       sx={{
         top: '0',
         paddingY: '2px',
         paddingTop: '5px',
-        backgroundColor: 'rgba(60, 60, 60, 0.4)',
-        backdropFilter: 'blur(20px)',
+        backgroundColor: 'rgba(80, 80, 80, 0.4)',
+        backdropFilter: 'blur(5px)',
+        boxShadow: 'none',
       }}
     >
       <Container maxWidth="xl">

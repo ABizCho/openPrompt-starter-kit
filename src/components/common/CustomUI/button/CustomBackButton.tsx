@@ -4,13 +4,15 @@ import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import palette from '@/styles/mui/palette';
 
-export type BackButtonVariant = 'outlined' | 'fill';
+export type CustomBackButtonVariant = 'outlined' | 'fill';
 
-interface BackButtonProps {
-  variant?: BackButtonVariant;
+interface CustomBackButtonProps {
+  variant?: CustomBackButtonVariant;
 }
 
-export const BackButton: React.FC<BackButtonProps> = ({ variant = 'fill' }) => {
+export const CustomBackButton: React.FC<CustomBackButtonProps> = ({
+  variant = 'fill',
+}) => {
   const navigate = useNavigate();
 
   return (

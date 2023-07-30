@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Box, Button, Divider, Typography } from '@mui/material';
-import Template from '@/components/common/ui/template';
-import CardOutlinedRounded from '@/components/common/ui/card/CardOutlinedRounded';
+import Template from '@/components/common/CustomUI/template';
+import CustomCardOutlinedRounded from '@/components/common/CustomUI/card/CustomCardOutlinedRounded';
 import {
   TBackgroundColor,
   TBackgroundVariant,
-} from '@/components/common/ui/background/types';
+} from '@/components/common/CustomUI/background/types';
 import { ButtonDesign } from './contents/ButtonDesign';
 import { TextFieldDesign } from './contents/TextFieldDesign';
 import { TypographyDesign } from './contents/TypograhyDesign';
-import { OtherComponents } from './contents/OtherComponents';
+import { CustomComponents } from './contents/CustomComponents';
 
 const DesignSystemPage = () => {
   const [withBackButtonActive, setWithBackButtonActive] = useState(true);
@@ -152,7 +152,7 @@ const DesignSystemPage = () => {
       <ButtonDesign />
       <TextFieldDesign />
       <TypographyDesign />
-      <OtherComponents />
+      <CustomComponents />
       <Divider sx={{ marginY: '80px' }} />
     </Template>
   );
@@ -165,7 +165,7 @@ interface CustomBoxProps extends React.ComponentPropsWithoutRef<typeof Box> {
 }
 
 interface StyledBoxOutlinedProps
-  extends React.ComponentPropsWithoutRef<typeof CardOutlinedRounded> {
+  extends React.ComponentPropsWithoutRef<typeof CustomCardOutlinedRounded> {
   children: React.ReactNode;
 }
 
@@ -192,7 +192,7 @@ export const StyledBoxOutlined = ({
   ...props
 }: StyledBoxOutlinedProps) => {
   return (
-    <CardOutlinedRounded
+    <CustomCardOutlinedRounded
       sx={{
         width: '100%',
         marginTop: '30px',
@@ -204,7 +204,7 @@ export const StyledBoxOutlined = ({
       }}
     >
       {children}
-    </CardOutlinedRounded>
+    </CustomCardOutlinedRounded>
   );
 };
 

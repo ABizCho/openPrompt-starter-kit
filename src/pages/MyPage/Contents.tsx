@@ -9,8 +9,8 @@ import {
   Grid,
   Typography,
 } from '@mui/material';
-import CardOutlinedGradient from '@/components/common/ui/card/CardOutlinedGradient';
-import CardOutlinedRounded from '@/components/common/ui/card/CardOutlinedRounded';
+import CustomCardOutlinedGradient from '@/components/common/CustomUI/card/CustomCardOutlinedGradient';
+import CustomCardOutlinedRounded from '@/components/common/CustomUI/card/CustomCardOutlinedRounded';
 import palette from '@/styles/mui/palette';
 
 const ContentDonateHistory = () => {
@@ -24,10 +24,10 @@ const ContentDonateHistory = () => {
         gap: '40px',
       }}
     >
-      <CardOutlinedRounded sx={{ height: '130px' }} />
-      <CardOutlinedRounded sx={{ height: '130px' }} />
-      <CardOutlinedRounded sx={{ height: '130px' }} />
-      <CardOutlinedRounded sx={{ height: '130px' }} />
+      <CustomCardOutlinedRounded sx={{ height: '130px' }} />
+      <CustomCardOutlinedRounded sx={{ height: '130px' }} />
+      <CustomCardOutlinedRounded sx={{ height: '130px' }} />
+      <CustomCardOutlinedRounded sx={{ height: '130px' }} />
     </Container>
   );
 };
@@ -78,10 +78,10 @@ const ContentPersonalInfo = () => {
         gap: '40px',
       }}
     >
-      <CardOutlinedGradient sx={{ height: '150px' }} />
-      <CardOutlinedGradient sx={{ height: '150px' }} />
-      <CardOutlinedGradient sx={{ height: '150px' }} />
-      <CardOutlinedGradient sx={{ height: '150px' }} />
+      <CustomCardOutlinedGradient sx={{ height: '150px' }} />
+      <CustomCardOutlinedGradient sx={{ height: '150px' }} />
+      <CustomCardOutlinedGradient sx={{ height: '150px' }} />
+      <CustomCardOutlinedGradient sx={{ height: '150px' }} />
     </Container>
   );
 };

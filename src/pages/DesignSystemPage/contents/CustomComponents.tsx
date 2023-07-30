@@ -1,11 +1,11 @@
 import { Typography, Box, Container } from '@mui/material';
 import { useState, useRef } from 'react';
 
-import CardOutlinedGradient from '@/components/common/ui/card/CardOutlinedGradient';
-import CardOutlinedRounded from '@/components/common/ui/card/CardOutlinedRounded';
+import CustomCardOutlinedGradient from '@/components/common/CustomUI/card/CustomCardOutlinedGradient';
+import CustomCardOutlinedRounded from '@/components/common/CustomUI/card/CustomCardOutlinedRounded';
 import CustomTabs, {
   ContentType,
-} from '@/components/common/ui/tabs/CustomTabs';
+} from '@/components/common/CustomUI/tabs/CustomTabs';
 import {
   ContentDonateHistory,
   ContentOwnNFT,
@@ -14,7 +14,7 @@ import {
 
 import { StyledBox, StyledBoxOutlined } from '..';
 
-export const OtherComponents = () => {
+export const CustomComponents = () => {
   const [content, setContent] = useState<ContentType>('donationHistory');
   const [showContent, setShowContent] = useState(true);
 
@@ -64,12 +64,12 @@ export const OtherComponents = () => {
         <br />
         <br />
         <br />
-        <Typography variant="subtitle1">Custom Boxes</Typography>
+        <Typography variant="subtitle1">Custom Cards</Typography>
         <Typography sx={{ textAlign: 'center' }}>
-          [CardOutlinedGradient, CardOutlinedRounded]
+          [CustomCardOutlinedGradient, CustomCardOutlinedRounded]
           <br />
           <br />
-          Mui Box를 이용해 만든 기본적인 커스텀 박스입니다. <br />
+          Mui Container를 이용해 만든 기본적인 커스텀 카드입니다. <br />
           padding 20% 기본 적용, 보더 스타일 커스텀 외 큰 의미는 없습니다.
         </Typography>
         <StyledBoxOutlined>
@@ -82,11 +82,11 @@ export const OtherComponents = () => {
               marginRight: '10%',
             }}
           >
-            <CardOutlinedGradient />
-            <CardOutlinedGradient sx={{ backgroundColor: 'red' }} />
+            <CustomCardOutlinedGradient />
+            <CustomCardOutlinedGradient sx={{ backgroundColor: 'red' }} />
             <br />
-            <CardOutlinedRounded />
-            <CardOutlinedRounded sx={{ borderColor: 'red' }} />
+            <CustomCardOutlinedRounded />
+            <CustomCardOutlinedRounded sx={{ borderColor: 'red' }} />
           </Box>
           <Box sx={{ width: '70%', marginLeft: '2rem' }}>
             <Typography>
@@ -95,14 +95,14 @@ export const OtherComponents = () => {
               <br />
               <br />
             </Typography>
-            <Typography color="primary">{`<CardOutlinedGradient />
+            <Typography color="primary">{`<CustomCardOutlinedGradient />
             `}</Typography>
-            <Typography color="primary">{`<CardOutlinedGradient sx={{ backgroundColor: 'red' }} />
+            <Typography color="primary">{`<CustomCardOutlinedGradient sx={{ backgroundColor: 'red' }} />
             `}</Typography>
             <br />
             <br />
-            <Typography color="primary">{`<CardOutlinedRounded />`}</Typography>
-            <Typography color="primary">{`<CardOutlinedGradient sx={{ borderColor: 'red' }} />
+            <Typography color="primary">{`<CustomCardOutlinedRounded />`}</Typography>
+            <Typography color="primary">{`<CustomCardOutlinedGradient sx={{ borderColor: 'red' }} />
             `}</Typography>
           </Box>
         </StyledBoxOutlined>
