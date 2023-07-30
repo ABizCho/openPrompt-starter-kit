@@ -6,10 +6,10 @@ import {
   TBackgroundColor,
   TBackgroundVariant,
 } from '@/components/common/CustomUI/background/types';
-import { ButtonDesign } from './contents/ButtonDesign';
-import { TextFieldDesign } from './contents/TextFieldDesign';
-import { TypographyDesign } from './contents/TypograhyDesign';
-import { CustomComponents } from './contents/CustomComponents';
+import { ButtonDesign } from './ButtonDesign';
+import { TextFieldDesign } from './TextFieldDesign';
+import { TypographyDesign } from './TypograhyDesign';
+import { CustomComponents } from './CustomComponents';
 
 const DesignSystemPage = () => {
   const [withBackButtonActive, setWithBackButtonActive] = useState(true);

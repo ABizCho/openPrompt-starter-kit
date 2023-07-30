@@ -1,6 +1,10 @@
 import { Typography, TextField, Box } from '@mui/material';
 import { useState } from 'react';
-import { InnerBoxLeft, StyledBox, StyledBoxOutlined } from '..';
+import {
+  InnerBoxLeft,
+  StyledBox,
+  StyledBoxOutlined,
+} from '../DesignSystemPage';
 
 export const TextFieldDesign = () => {
   const [text, setText] = useState<string>('');

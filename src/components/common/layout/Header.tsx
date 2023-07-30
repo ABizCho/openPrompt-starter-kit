@@ -15,12 +15,6 @@ import { NavLink } from 'react-router-dom';
 import RouterMeta from '@/lib/RouterMeta';
 import palette from '@/styles/mui/palette';
 
-const settings = {
-  mypage: '마이페이지',
-  something: '뭔가뭔가',
-  logout: '로그아웃',
-};
-
 const ResponsiveAppBar = () => {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null,
@@ -41,9 +35,9 @@ const ResponsiveAppBar = () => {
         top: '0',
         paddingY: '2px',
         paddingTop: '5px',
-        backgroundColor: 'rgba(80, 80, 80, 0.4)',
-        backdropFilter: 'blur(5px)',
-        boxShadow: 'none',
+        backgroundColor: 'rgba(255, 255, 2555, 0.15)',
+        backdropFilter: 'blur(80px)',
+        boxShadow: '0px 4px 40px 0px rgba(0, 0, 0, 0.04)',
       }}
     >
       <Container maxWidth="xl">
@@ -77,44 +71,6 @@ const ResponsiveAppBar = () => {
                 </Button>
               );
             })}
-            <Box sx={{ flexGrow: 0, marginLeft: '10px' }}>
-              <Tooltip title="Open settings">
-                <Button
-                  disableRipple
-                  onClick={handleOpenUserMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  <Typography>{`USER 님`}</Typography>
-                </Button>
-              </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {Object.entries(settings).map(([key, value]) => (
-                  <MenuItem key={key} onClick={handleCloseUserMenu}>
-                    <NavLink
-                      to={`/${key}`}
-                      style={{ color: palette.grey[400], fontSize: '14px' }}
-                    >
-                      <Typography textAlign="center">{value}</Typography>
-                    </NavLink>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
           </Box>
         </Toolbar>
       </Container>
