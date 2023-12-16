@@ -1,6 +1,8 @@
 import { Typography, Box, Container } from '@mui/material';
 import { useState, useRef } from 'react';
 
+import EmailIcon from '@mui/icons-material/Email';
+import CustomTextField from '@/components/common/CustomUI/input/CustomTextField';
 import CustomCardOutlinedGradient from '@/components/common/CustomUI/card/CustomCardOutlinedGradient';
 import CustomCardOutlinedRounded from '@/components/common/CustomUI/card/CustomCardOutlinedRounded';
 import CustomTabs, {
@@ -162,6 +164,21 @@ export const CustomComponents = () => {
             </Box>
           </Container>
         </Box>
+      </StyledBox>
+      <StyledBox>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <CustomTextField
+          Icon={EmailIcon}
+          label="Email Address"
+          placeholder="Enter your email"
+
+          // 다른 TextField props
+        />
       </StyledBox>
     </StyledBox>
   );

@@ -24,7 +24,7 @@ const DesignSystemPage = () => {
       bgcolor={templateColor}
       withBackButton={withBackButtonActive}
     >
-      <Typography variant="h2" color="primary" sx={{ marginBottom: '100px' }}>
+      <Typography variant="h3" color="primary" sx={{ marginBottom: '100px' }}>
         Design System
       </Typography>
 
